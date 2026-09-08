@@ -1,0 +1,30 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "build prog",
+            "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "-Iinclude",
+                "src/main.c",
+                "src/filters.c",
+                "-o",
+                "prog.exe",
+                "-lole32", "-luuid", "-lmfplat", "-lmf", "-lmfreadwrite", "-lgdi32", "-lshlwapi"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+           "detail": "Builds prog.c and roots.c into prog.exe"
+        }
+    ]
+}
